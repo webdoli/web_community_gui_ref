@@ -54,10 +54,12 @@
 .uk-grid-column-small,
 .uk-grid-small {
     margin-left: -15px;
+    margin-top: -15px;
 }
 .uk-grid-column-small > *,
 .uk-grid-small > * {
     padding-left: 15px;
+    padding-top: 15px;
 }
 /* small 그리드 간격 위/아래 여백 유지 */
 * + .uk-grid-margin-small,
