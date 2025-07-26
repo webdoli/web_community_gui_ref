@@ -1800,3 +1800,59 @@ html body.dark-theme .search__input [class*='ico_'] {
         max-width: 300px;
     }
 }
+
+/* 드롭다운 래퍼 */
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 1em; /* 간격 조정 */
+}
+
+/* 표시 버튼 */
+.custom-dropdown-btn {
+  padding: .5em 1em;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  min-width: 150px; /* 필요에 따라 조정 */
+  text-align: left;
+}
+
+/* 옵션 리스트 */
+.custom-dropdown-list {
+  position: absolute;
+  top: 100%; left: 0; right: 0;
+  margin: 0; padding: 0;
+  list-style: none;
+  border: 1px solid #ccc;
+  border-top: none;
+  background: #fff;
+  display: none;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+/* 열렸을 때 */
+.custom-dropdown-list.open {
+  display: block;
+}
+
+/* 옵션 항목 */
+.custom-dropdown-option {
+  padding: .5em 1em;
+  cursor: pointer;
+}
+.custom-dropdown-option:hover {
+  background: #f0f0f0;
+}
+
+
+/* 2) 사이드바 & no-scroll */
+.sidebar { /* 기본 사이드바 스타일 */ }
+.sidebar.is-show { /* 보여질 때 스타일 예: transform이나 display */ }
+.menu-btn.is-active { /* 활성화된 버튼 스타일 */ }
+.no-scroll {
+  overflow: hidden;
+}
