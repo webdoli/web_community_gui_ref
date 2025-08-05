@@ -1,0 +1,272 @@
+.page-wrapper .page-main {
+    scrollbar-color: #F46119 #E2EBEC;
+    scrollbar-width: thin !important;
+    -moz-appearance: none !important;
+    display: block;
+    position: relative;
+    height: calc(100vh - 75px);
+    padding: 45px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.page-wrapper .page-main::-webkit-scrollbar {
+    width: 6px;
+}
+.page-wrapper .page-main::-webkit-scrollbar-track {
+    background-color: #E2EBEC;
+}
+.page-wrapper .page-main::-webkit-scrollbar-thumb {
+    background-color: #F46119;
+}
+.page-wrapper .page-main::before {
+    display: block;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    content: '';
+    opacity: 0;
+    pointer-events: none;
+}
+.sidebar.is-show + .page-main {
+    -webkit-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+    left: 250px;
+    width: calc(100% - 250px);
+    padding: 45px 45px;
+    transition: all 0.25s linear;
+}
+.sidebar + .page-main {
+    -webkit-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+    left: 0;
+    width: 100%;
+    padding: 45px 30px;
+    transition: all 0.25s linear;
+}
+.gallery {
+    position: relative;
+    padding: 15px;
+    border-radius: 5px;
+    background: #fff;
+}
+.gallery-small {
+    margin-top: 15px;
+}
+
+.gallery-small .swiper {
+    margin: 0;
+    padding: 0;
+}
+body.dark-theme .gallery,
+body.dark-theme .game-profile-price {
+    background: #0C1826;
+    color: #A1A1A1;
+}
+.swiper {
+    margin: -20px;
+    padding: 20px 20px 40px 20px;
+}
+.gallery-small .swiper {
+    margin: 0;
+    padding: 0;
+}
+.game-profile-card {
+    display: block;
+    position: relative;
+    margin-bottom: 12px;
+    padding: 15px 15px 7px 15px;
+    border-radius: 5px;
+    background: #fff;
+}
+.game-profile-card__media {
+    display: block;
+    position: relative;
+}
+
+.game-profile-card__media img {
+    width: 100%;
+}
+
+.game-profile-card__intro {
+    margin: 15px 0 20px 0;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 25px;
+    color: #353535;
+}
+
+.game-profile-card__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    padding-bottom: 15px;
+}
+
+.game-profile-card__list li {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+}
+
+.game-profile-card__list li + li {
+    margin-top: 10px;
+}
+
+.game-profile-card__list li > *:first-child {
+    margin-right: 10px;
+    color: #767676;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.31;
+}
+.game-profile-card__type {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 15px 0 0 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.game-profile-card__type li {
+    margin: 0 8px 8px 0;
+}
+
+.game-profile-card__type li:last-child {
+    margin-right: 0;
+}
+
+.game-profile-card__type li span {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    padding: 0 5px;
+    border-radius: 5px;
+    background: #F5F5F5;
+    color: #5F5F5F;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.36;
+    text-transform: uppercase;
+}
+.game-card__rating {
+    margin-right: 10px;
+    color: #ed9f3a;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.31;
+}
+.game-card__rating .rating-vote {
+    padding-left: 7px;
+    font-size: 12px;
+}
+.game-card__rating [class*='ico_'] {
+    margin-left: 6px;
+    color: #FF9900;
+    position: relative;
+    top: 2px;
+}
+body.dark-theme .game-card__rating {
+    color: #fff;
+}
+.game-profile-price {
+    display: block;
+    position: relative;
+    margin-bottom: 12px;
+    padding: 15px;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.game-profile-price__value {
+    margin: 20px 0;
+    color: #F46119;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.33;
+    text-align: center;
+}
+.game-profile-price .uk-button {
+    height: 50px;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 1.31;
+}
+
+.game-profile-price .uk-button [class*='ico_'] {
+    margin-right: 10px;
+}
+
+.game-profile-price .uk-button + .uk-button {
+    margin-top: 8px;
+}
+
+@media only screen and (max-width: 639px) {
+    .gallery-small {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 959px) {
+
+    .sidebar.is-show + .page-main {
+        left: 0;
+        width: 100%;
+        padding: 30px;
+        overflow: hidden;
+    }
+
+    .sidebar.is-show + .page-main::before {
+        opacity: 1;
+    }
+
+    .sidebar + .page-main {
+        padding: 30px 30px 45px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .page-wrapper .page-main {
+        padding: 20px 15px 40px;
+    }
+
+    .sidebar.is-show + .page-main {
+        padding: 20px 15px 30px;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+
+    html .game-profile-price .uk-button {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+}
+
