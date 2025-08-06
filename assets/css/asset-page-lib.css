@@ -22,7 +22,7 @@ a:hover {
   text-decoration: underline;
 }
 img {
-  vertical-align: middle;
+  /* vertical-align: middle; */
 }
 img {
   max-width: 100%;
