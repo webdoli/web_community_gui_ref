@@ -1,120 +1,636 @@
-.uk-breadcrumb {
-    padding: 0;
-    list-style: none;
+/*! UIkit 3.9.2 | https://www.getuikit.com | (c) 2014 - 2021 YOOtheme | MIT License */
+html {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  background: #fff;
+  color: #666;
 }
-.uk-breadcrumb > * {
-    display: contents;
+body {
+  margin: 0;
 }
-.uk-breadcrumb > * > * {
-    font-size: 0.875rem;
-    color: #999;
+a {
+  color: #1e87f0;
+  text-decoration: none;
+  cursor: pointer;
 }
-.uk-breadcrumb > * > :hover {
-    color: #666;
-    text-decoration: none;
+a:hover {
+  color: #0f6ecd;
+  text-decoration: underline;
 }
-.uk-breadcrumb > :last-child > a:not([href]),
-.uk-breadcrumb > :last-child > span {
-    color: #666;
+img {
+  vertical-align: middle;
 }
-.uk-breadcrumb > :nth-child(n + 2):not(.uk-first-column):before {
-    content: "/";
-    display: inline-block;
-    margin: 0 20px 0 16px;
-    font-size: 0.875rem;
-    color: #999;
+img {
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
 }
-
-.uk-text-lead {
-    font-size: 1.5rem;
-    line-height: 1.5;
-    color: #333;
+@supports (display: block) {
 }
-.uk-width-2-3 {
-    width: 66.64445%;
+ul {
+  margin: 0 0 20px;
 }
-.uk-width-1-3 {
-    width: 33.32223%;
+* + ul {
+  margin-top: 20px;
+}
+h3 {
+  margin: 0 0 20px;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif;
+  font-weight: 400;
+  color: #333;
+  text-transform: none;
+}
+* + h3 {
+  margin-top: 40px;
+}
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+ul {
+  padding-left: 30px;
+}
+:focus {
+  outline: 0;
+}
+:focus:not([tabindex^="-"]) {
+  outline: 2px dotted #333;
+  outline-offset: 1px;
+}
+:focus:not(:focus-visible) {
+  outline: 0;
+}
+:focus-visible {
+  outline: 2px dotted #333;
+}
+::selection {
+  background: #39f;
+  color: #fff;
+  text-shadow: none;
+}
+main {
+  display: block;
+}
+:root {
+  --uk-breakpoint-s: 640px;
+  --uk-breakpoint-m: 960px;
+  --uk-breakpoint-l: 1200px;
+  --uk-breakpoint-xl: 1600px;
+}
+.uk-heading-line > :after,
+.uk-heading-line > :before {
+  content: "";
+  position: absolute;
+  top: calc(50% - ((0.2px + 0.05em) / 2));
+  width: 2000px;
+  border-bottom: calc(0.2px + 0.05em) solid #e5e5e5;
+}
+.uk-heading-line > :before {
+  right: 100%;
+  margin-right: calc(5px + 0.3em);
+}
+.uk-heading-line > :after {
+  left: 100%;
+  margin-left: calc(5px + 0.3em);
+}
+[class*="uk-list"] > :before {
+  content: "";
+  position: relative;
+  left: -30px;
+  width: 30px;
+  height: 1.5em;
+  margin-bottom: -1.5em;
+  display: list-item;
+  list-style-position: inside;
+  text-align: right;
+}
+.uk-list-disc > :before {
+  list-style-type: disc;
+}
+.uk-list-circle > :before {
+  list-style-type: circle;
+}
+.uk-list-square > :before {
+  list-style-type: square;
+}
+.uk-list-decimal > :before {
+  content: counter(a, a) "\200A.\00A0";
+}
+.uk-list-hyphen > :before {
+  content: "–\00A0\00A0";
+}
+.uk-list-muted > :before {
+  color: #999 !important;
+}
+.uk-list-emphasis > :before {
+  color: #333 !important;
+}
+.uk-list-primary > :before {
+  color: #1e87f0 !important;
+}
+.uk-list-secondary > :before {
+  color: #222 !important;
+}
+.uk-list-bullet > :before {
+  content: "";
+  position: relative;
+  left: -30px;
+  width: 30px;
+  height: 1.5em;
+  margin-bottom: -1.5em;
+  background-image: url(../../../node_modules/uikit/dist/css/data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%226%22%20height%3D%226%22%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Ccircle%20fill%3D%22%23666%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%223%22%20%2F%3E%0A%3C%2Fsvg%3E);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+button.uk-icon:not(:disabled) {
+  cursor: pointer;
+}
+.uk-range:not(:disabled)::-webkit-slider-thumb {
+  cursor: pointer;
+}
+.uk-range:not(:disabled)::-moz-range-thumb {
+  cursor: pointer;
+}
+.uk-range:not(:disabled)::-ms-thumb {
+  cursor: pointer;
+}
+.uk-checkbox:not(:disabled),
+.uk-radio:not(:disabled) {
+  cursor: pointer;
+}
+.uk-button {
+  margin: 0;
+  border: none;
+  overflow: visible;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 30px;
+  vertical-align: middle;
+  font-size: 0.875rem;
+  line-height: 38px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.1s ease-in-out;
+  transition-property: color, background-color, border-color;
+}
+.uk-button:not(:disabled) {
+  cursor: pointer;
+}
+.uk-button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+.uk-button:hover {
+  text-decoration: none;
+}
+.uk-button-primary {
+  background-color: #1e87f0;
+  color: #fff;
+  border: 1px solid transparent;
+}
+.uk-button-primary:hover {
+  background-color: #0f7ae5;
+  color: #fff;
+}
+.uk-button-primary:active {
+  background-color: #0e6dcd;
+  color: #fff;
 }
 .uk-button-danger {
-    background-color: #f0506e;
-    color: #fff;
-    border: 1px solid transparent;
+  background-color: #f0506e;
+  color: #fff;
+  border: 1px solid transparent;
 }
 .uk-button-danger:hover {
-    background-color: #ee395b;
-    color: #fff;
+  background-color: #ee395b;
+  color: #fff;
 }
-.uk-button-danger.uk-active,
 .uk-button-danger:active {
-    background-color: #ec2147;
-    color: #fff;
+  background-color: #ec2147;
+  color: #fff;
 }
 .uk-button-danger:disabled,
 .uk-button-primary:disabled {
-    background-color: transparent;
-    color: #999;
-    border-color: #e5e5e5;
+  background-color: transparent;
+  color: #999;
+  border-color: #e5e5e5;
 }
-.uk-button-primary {
-    background-color: #1e87f0;
-    color: #fff;
-    border: 1px solid transparent;
+:root {
+  --uk-leader-fill-content: ".";
 }
-.uk-button-primary:hover {
-    background-color: #0f7ae5;
-    color: #fff;
+.uk-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-.uk-button-primary.uk-active,
-.uk-button-primary:active {
-    background-color: #0e6dcd;
-    color: #fff;
+.uk-grid > * {
+  margin: 0;
 }
-
-@media (min-width: 640px) {
-    .uk-width-2-3\@s {
-        width: 66.64445%;
-    }
-    .uk-width-1-3\@s {
-        width: 33.32223%;
-    }
-    .uk-width-1-1\@s {
-        width: 100%;
-    }
+.uk-grid > * > :last-child {
+  margin-bottom: 0;
 }
-
-@media (min-width: 960px) {
-    .uk-width-2-3\@m {
-        width: 66.64445%;
-    }
-    .uk-width-1-3\@m {
-        width: 33.32223%;
-    }
-    .uk-width-1-1\@m {
-        width: 100%;
-    }
+.uk-grid {
+  margin-left: -30px;
 }
-
+.uk-grid > * {
+  padding-left: 30px;
+}
 @media (min-width: 1200px) {
-    .uk-width-2-3\@l {
-        width: 66.64445%;
-    }
-    .uk-width-1-3\@l {
-        width: 33.32223%;
-    }
-    .uk-width-1-1\@l {
-        width: 100%;
-    }
+  .uk-grid {
+    margin-left: -40px;
+  }
+  .uk-grid > * {
+    padding-left: 40px;
+  }
 }
-
-@media (min-width: 1600px) {
-    .uk-width-2-3\@xl {
-        width: 66.64445%;
-    }
-    .uk-width-1-3\@xl {
-        width: 33.32223%;
-    }
-    .uk-width-1-1\@xl {
-        width: 100%;
-    }
+.uk-grid-small {
+  margin-left: -15px;
+}
+.uk-grid-small > * {
+  padding-left: 15px;
+}
+.uk-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.uk-nav li > a {
+  display: flex;
+  align-items: center;
+  column-gap: 0.25em;
+  text-decoration: none;
+}
+.uk-nav li > a > * {
+  flex: none;
+}
+.uk-nav > li > a {
+  padding: 5px 0;
+}
+.uk-nav-header {
+  padding: 5px 0;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+}
+.uk-nav-header:not(:first-child) {
+  margin-top: 20px;
+}
+.uk-navbar-container > :after,
+.uk-navbar-container > :before {
+  display: none !important;
+}
+.uk-subnav-divider > :before {
+  content: "";
+  height: 1.5em;
+  margin-left: 0;
+  margin-right: 20px;
+  border-left: 1px solid transparent;
+}
+.uk-breadcrumb {
+  padding: 0;
+  list-style: none;
+}
+.uk-breadcrumb > * {
+  display: contents;
+}
+.uk-breadcrumb > * > * {
+  font-size: 0.875rem;
+  color: #999;
+}
+.uk-breadcrumb > * > :hover {
+  color: #666;
+  text-decoration: none;
+}
+.uk-breadcrumb > :last-child > span {
+  color: #666;
+}
+.uk-breadcrumb > :nth-child(n + 2):not(.uk-first-column):before {
+  content: "/";
+  display: inline-block;
+  margin: 0 20px 0 16px;
+  font-size: 0.875rem;
+  color: #999;
+}
+.uk-pagination > * > :hover {
+  color: #666;
+  text-decoration: none;
+}
+.uk-dotnav > * > :hover {
+  background-color: hsla(0, 0%, 40%, 0.6);
+  border-color: transparent;
+}
+.uk-dotnav > * > :active {
+  background-color: hsla(0, 0%, 40%, 0.2);
+  border-color: transparent;
+}
+.uk-thumbnav > * > :after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: hsla(0, 0%, 100%, 0.4);
+  transition: background-color 0.1s ease-in-out;
+}
+.uk-thumbnav > * > :hover:after,
+.uk-thumbnav > .uk-active > :after {
+  background-color: transparent;
+}
+.uk-lightbox :focus-visible {
+  outline-color: hsla(0, 0%, 100%, 0.7);
+}
+.uk-animation-toggle:not(:hover):not(:focus) [class*="uk-animation-"] {
+  animation-name: none;
+}
+[class*="uk-width"] {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+}
+@media (min-width: 640px) {
+  .uk-width-1-3\@s {
+    width: 33.32223%;
+  }
+  .uk-width-2-3\@s {
+    width: 66.64445%;
+  }
+}
+.uk-text-lead {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #333;
+}
+@supports (-webkit-background-clip: text) {
+}
+@supports (filter: blur(0)) {
+}
+@-moz-document url-prefix() {
+}
+@supports (-ms-ime-align: auto) {
+}
+:root {
+  --uk-position-margin-offset: 0px;
+}
+:where(.uk-transition-fade),
+:where([class*="uk-transition-scale"]),
+:where([class*="uk-transition-slide"]) {
+  --uk-position-translate-x: 0;
+  --uk-position-translate-y: 0;
+}
+.uk-visible-toggle:not(:hover):not(:focus) .uk-hidden-hover:not(:focus-within) {
+  position: absolute !important;
+  width: 0 !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+}
+.uk-visible-toggle:not(:hover):not(:focus)
+  .uk-invisible-hover:not(:focus-within) {
+  opacity: 0 !important;
+}
+.uk-card-primary.uk-card-body :focus-visible,
+.uk-card-primary > :not([class*="uk-card-media"]) :focus-visible,
+.uk-card-secondary.uk-card-body :focus-visible,
+.uk-card-secondary > :not([class*="uk-card-media"]) :focus-visible,
+.uk-light :focus-visible,
+.uk-offcanvas-bar :focus-visible,
+.uk-overlay-primary :focus-visible,
+.uk-section-primary:not(.uk-preserve-color) :focus-visible,
+.uk-section-secondary:not(.uk-preserve-color) :focus-visible,
+.uk-tile-primary:not(.uk-preserve-color) :focus-visible,
+.uk-tile-secondary:not(.uk-preserve-color) :focus-visible {
+  outline-color: #fff;
+}
+.uk-card-primary.uk-card-body .uk-heading-line > :after,
+.uk-card-primary.uk-card-body .uk-heading-line > :before,
+.uk-card-primary > :not([class*="uk-card-media"]) .uk-heading-line > :after,
+.uk-card-primary > :not([class*="uk-card-media"]) .uk-heading-line > :before,
+.uk-card-secondary.uk-card-body .uk-heading-line > :after,
+.uk-card-secondary.uk-card-body .uk-heading-line > :before,
+.uk-card-secondary > :not([class*="uk-card-media"]) .uk-heading-line > :after,
+.uk-card-secondary > :not([class*="uk-card-media"]) .uk-heading-line > :before,
+.uk-light .uk-heading-line > :after,
+.uk-light .uk-heading-line > :before,
+.uk-offcanvas-bar .uk-heading-line > :after,
+.uk-offcanvas-bar .uk-heading-line > :before,
+.uk-overlay-primary .uk-heading-line > :after,
+.uk-overlay-primary .uk-heading-line > :before,
+.uk-section-primary:not(.uk-preserve-color) .uk-heading-line > :after,
+.uk-section-primary:not(.uk-preserve-color) .uk-heading-line > :before,
+.uk-section-secondary:not(.uk-preserve-color) .uk-heading-line > :after,
+.uk-section-secondary:not(.uk-preserve-color) .uk-heading-line > :before,
+.uk-tile-primary:not(.uk-preserve-color) .uk-heading-line > :after,
+.uk-tile-primary:not(.uk-preserve-color) .uk-heading-line > :before,
+.uk-tile-secondary:not(.uk-preserve-color) .uk-heading-line > :after,
+.uk-tile-secondary:not(.uk-preserve-color) .uk-heading-line > :before {
+  border-bottom-color: hsla(0, 0%, 100%, 0.2);
+}
+.uk-card-primary.uk-card-body .uk-list-muted > :before,
+.uk-card-primary > :not([class*="uk-card-media"]) .uk-list-muted > :before,
+.uk-card-secondary.uk-card-body .uk-list-muted > :before,
+.uk-card-secondary > :not([class*="uk-card-media"]) .uk-list-muted > :before,
+.uk-light .uk-list-muted > :before,
+.uk-offcanvas-bar .uk-list-muted > :before,
+.uk-overlay-primary .uk-list-muted > :before,
+.uk-section-primary:not(.uk-preserve-color) .uk-list-muted > :before,
+.uk-section-secondary:not(.uk-preserve-color) .uk-list-muted > :before,
+.uk-tile-primary:not(.uk-preserve-color) .uk-list-muted > :before,
+.uk-tile-secondary:not(.uk-preserve-color) .uk-list-muted > :before {
+  color: hsla(0, 0%, 100%, 0.5) !important;
+}
+.uk-card-primary.uk-card-body .uk-list-emphasis > :before,
+.uk-card-primary.uk-card-body .uk-list-primary > :before,
+.uk-card-primary.uk-card-body .uk-list-secondary > :before,
+.uk-card-primary > :not([class*="uk-card-media"]) .uk-list-emphasis > :before,
+.uk-card-primary > :not([class*="uk-card-media"]) .uk-list-primary > :before,
+.uk-card-primary > :not([class*="uk-card-media"]) .uk-list-secondary > :before,
+.uk-card-secondary.uk-card-body .uk-list-emphasis > :before,
+.uk-card-secondary.uk-card-body .uk-list-primary > :before,
+.uk-card-secondary.uk-card-body .uk-list-secondary > :before,
+.uk-card-secondary > :not([class*="uk-card-media"]) .uk-list-emphasis > :before,
+.uk-card-secondary > :not([class*="uk-card-media"]) .uk-list-primary > :before,
+.uk-card-secondary
+  > :not([class*="uk-card-media"])
+  .uk-list-secondary
+  > :before,
+.uk-light .uk-list-emphasis > :before,
+.uk-light .uk-list-primary > :before,
+.uk-light .uk-list-secondary > :before,
+.uk-offcanvas-bar .uk-list-emphasis > :before,
+.uk-offcanvas-bar .uk-list-primary > :before,
+.uk-offcanvas-bar .uk-list-secondary > :before,
+.uk-overlay-primary .uk-list-emphasis > :before,
+.uk-overlay-primary .uk-list-primary > :before,
+.uk-overlay-primary .uk-list-secondary > :before,
+.uk-section-primary:not(.uk-preserve-color) .uk-list-emphasis > :before,
+.uk-section-primary:not(.uk-preserve-color) .uk-list-primary > :before,
+.uk-section-primary:not(.uk-preserve-color) .uk-list-secondary > :before,
+.uk-section-secondary:not(.uk-preserve-color) .uk-list-emphasis > :before,
+.uk-section-secondary:not(.uk-preserve-color) .uk-list-primary > :before,
+.uk-section-secondary:not(.uk-preserve-color) .uk-list-secondary > :before,
+.uk-tile-primary:not(.uk-preserve-color) .uk-list-emphasis > :before,
+.uk-tile-primary:not(.uk-preserve-color) .uk-list-primary > :before,
+.uk-tile-primary:not(.uk-preserve-color) .uk-list-secondary > :before,
+.uk-tile-secondary:not(.uk-preserve-color) .uk-list-emphasis > :before,
+.uk-tile-secondary:not(.uk-preserve-color) .uk-list-primary > :before,
+.uk-tile-secondary:not(.uk-preserve-color) .uk-list-secondary > :before {
+  color: #fff !important;
+}
+.uk-card-primary.uk-card-body .uk-list-bullet > :before,
+.uk-card-primary > :not([class*="uk-card-media"]) .uk-list-bullet > :before,
+.uk-card-secondary.uk-card-body .uk-list-bullet > :before,
+.uk-card-secondary > :not([class*="uk-card-media"]) .uk-list-bullet > :before,
+.uk-light .uk-list-bullet > :before,
+.uk-offcanvas-bar .uk-list-bullet > :before,
+.uk-overlay-primary .uk-list-bullet > :before,
+.uk-section-primary:not(.uk-preserve-color) .uk-list-bullet > :before,
+.uk-section-secondary:not(.uk-preserve-color) .uk-list-bullet > :before,
+.uk-tile-primary:not(.uk-preserve-color) .uk-list-bullet > :before,
+.uk-tile-secondary:not(.uk-preserve-color) .uk-list-bullet > :before {
+  background-image: url(../../../node_modules/uikit/dist/css/data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%226%22%20height%3D%226%22%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Ccircle%20fill%3D%22rgba%28255,%20255,%20255,%200.7%29%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%223%22%20%2F%3E%0A%3C%2Fsvg%3E);
+}
+.uk-card-primary.uk-card-body .uk-breadcrumb > * > :hover,
+.uk-card-primary > :not([class*="uk-card-media"]) .uk-breadcrumb > * > :hover,
+.uk-card-secondary.uk-card-body .uk-breadcrumb > * > :hover,
+.uk-card-secondary > :not([class*="uk-card-media"]) .uk-breadcrumb > * > :hover,
+.uk-light .uk-breadcrumb > * > :hover,
+.uk-offcanvas-bar .uk-breadcrumb > * > :hover,
+.uk-overlay-primary .uk-breadcrumb > * > :hover,
+.uk-section-primary:not(.uk-preserve-color) .uk-breadcrumb > * > :hover,
+.uk-section-secondary:not(.uk-preserve-color) .uk-breadcrumb > * > :hover,
+.uk-tile-primary:not(.uk-preserve-color) .uk-breadcrumb > * > :hover,
+.uk-tile-secondary:not(.uk-preserve-color) .uk-breadcrumb > * > :hover {
+  color: hsla(0, 0%, 100%, 0.7);
+}
+.uk-card-primary.uk-card-body .uk-pagination > * > :hover,
+.uk-card-primary > :not([class*="uk-card-media"]) .uk-pagination > * > :hover,
+.uk-card-secondary.uk-card-body .uk-pagination > * > :hover,
+.uk-card-secondary > :not([class*="uk-card-media"]) .uk-pagination > * > :hover,
+.uk-light .uk-pagination > * > :hover,
+.uk-offcanvas-bar .uk-pagination > * > :hover,
+.uk-overlay-primary .uk-pagination > * > :hover,
+.uk-section-primary:not(.uk-preserve-color) .uk-pagination > * > :hover,
+.uk-section-secondary:not(.uk-preserve-color) .uk-pagination > * > :hover,
+.uk-tile-primary:not(.uk-preserve-color) .uk-pagination > * > :hover,
+.uk-tile-secondary:not(.uk-preserve-color) .uk-pagination > * > :hover {
+  color: hsla(0, 0%, 100%, 0.7);
+}
+.uk-card-primary.uk-card-body .uk-dotnav > * > :hover,
+.uk-card-primary > :not([class*="uk-card-media"]) .uk-dotnav > * > :hover,
+.uk-card-secondary.uk-card-body .uk-dotnav > * > :hover,
+.uk-card-secondary > :not([class*="uk-card-media"]) .uk-dotnav > * > :hover,
+.uk-light .uk-dotnav > * > :hover,
+.uk-offcanvas-bar .uk-dotnav > * > :hover,
+.uk-overlay-primary .uk-dotnav > * > :hover,
+.uk-section-primary:not(.uk-preserve-color) .uk-dotnav > * > :hover,
+.uk-section-secondary:not(.uk-preserve-color) .uk-dotnav > * > :hover,
+.uk-tile-primary:not(.uk-preserve-color) .uk-dotnav > * > :hover,
+.uk-tile-secondary:not(.uk-preserve-color) .uk-dotnav > * > :hover {
+  background-color: hsla(0, 0%, 100%, 0.9);
+  border-color: transparent;
+}
+.uk-card-primary.uk-card-body .uk-dotnav > * > :active,
+.uk-card-primary > :not([class*="uk-card-media"]) .uk-dotnav > * > :active,
+.uk-card-secondary.uk-card-body .uk-dotnav > * > :active,
+.uk-card-secondary > :not([class*="uk-card-media"]) .uk-dotnav > * > :active,
+.uk-light .uk-dotnav > * > :active,
+.uk-offcanvas-bar .uk-dotnav > * > :active,
+.uk-overlay-primary .uk-dotnav > * > :active,
+.uk-section-primary:not(.uk-preserve-color) .uk-dotnav > * > :active,
+.uk-section-secondary:not(.uk-preserve-color) .uk-dotnav > * > :active,
+.uk-tile-primary:not(.uk-preserve-color) .uk-dotnav > * > :active,
+.uk-tile-secondary:not(.uk-preserve-color) .uk-dotnav > * > :active {
+  background-color: hsla(0, 0%, 100%, 0.5);
+  border-color: transparent;
+}
+@media print {
+  *,
+  :after,
+  :before {
+    background: 0 0 !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  @page {
+    margin: 0.5cm;
+  }
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h3 {
+    page-break-after: avoid;
+  }
+}
+@font-face {
+  font-family: swiper-icons;
+  src: url(../../../node_modules/swiper/data:application/font-woff;charset=utf-8;base64,\ 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);
+  font-weight: 400;
+  font-style: normal;
+}
+:root {
+  --swiper-theme-color: #007aff;
+}
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+}
+.swiper-wrapper {
+  transform: translateZ(0);
+}
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+}
+:root {
+  --swiper-navigation-size: 44px;
+}
+.swiper-pagination {
+  position: absolute;
+  text-align: center;
+  transition: opacity 0.3s;
+  transform: translateZ(0);
+  z-index: 10;
 }
