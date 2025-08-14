@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mopple — 웃기고, 독특하게, 기억에 남게!</title>
+  <meta name="description" content="3D 모델에 생명을 불어넣는 병맛 모션그래픽 제작 툴, Mopple. 지금 모핑을 시작하세요." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#F6F7FB; --ink:#14151A; --ink2:#4A4E57; --brand:#111; --brand-ink:#fff;
+      --card:#fff; --line:#E6E8EF; --muted:#8A909C; --accent:#E9F0FF;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:'Pretendard',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Ubuntu,'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic',sans-serif}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:100%;max-width:1140px;margin:0 auto;padding:0 20px}
+    .btn{display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 18px;border-radius:14px;background:var(--brand);color:var(--brand-ink);font-weight:700;border:1px solid #000;box-shadow:0 6px 20px rgba(0,0,0,.08);transition:transform .06s ease}
+    .btn:active{transform:translateY(1px)}
+    .btn--ghost{background:#fff;color:#111;border-color:var(--line)}
+    header{position:sticky;top:0;background:rgba(246,247,251,.8);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--line);z-index:10}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .nav__left{display:flex;align-items:center;gap:14px}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
+    .logo i{width:28px;height:28px;border-radius:8px;background:#111;display:inline-block;position:relative}
+    .logo i::after{content:"";position:absolute;left:7px;top:7px;width:14px;height:14px;border-radius:3px;background:#fff}
+    .menu{display:flex;align-items:center;gap:18px;color:var(--ink2)}
+    .hero{padding:64px 0 32px}
+    .hero__wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:26px;align-items:center}
+    .h-title{font-size:40px;line-height:1.15;margin:0 0 12px;font-weight:800}
+    .h-sub{font-size:16px;color:var(--ink2);margin:0 0 22px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:0 20px 40px rgba(8,12,44,.06)}
+    .card--pad{padding:18px}
+    .stack{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+    .section{padding:64px 0}
+    .sec-title{font-size:26px;margin:0 0 18px;font-weight:800}
+    .grid{display:grid;gap:18px}
+    .grid--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid--4{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .step{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+    .step img{aspect-ratio:16/6;object-fit:cover}
+    .note{font-size:14px;color:var(--muted)}
+    .sample{border:1px dashed var(--line);border-radius:16px;padding:12px;background:#fff}
+    .template{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:transform .12s ease}
+    .template:hover{transform:translateY(-2px)}
+    .template .cap{padding:10px 12px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+    .footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted)}
+    @media(max-width:960px){.hero__wrap{grid-template-columns:1fr}.h-title{font-size:32px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="nav__left">
+        <a href="#" class="logo" aria-label="Mopple">
+          <img src="./assets/mopple_logo03.png" style="width:34px;"><span>MOPPLE</span>
+        </a>
+        <nav class="menu">
+          <a href="#features">Features</a>
+          <a href="#templates">Templates</a>
+          <a href="#pricing">Pricing</a>
+        </nav>
+      </div>
+      <div class="nav__right">
+        <a class="btn btn--ghost" href="/login">Login</a>
+        <a class="btn" href="/mopping">모핑 시작하기</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__wrap">
+        <div>
+          <h1 class="h-title">웃기고, 독특하게, 기억에 남게!</h1>
+          <p class="h-sub">3D 모델에 생명을 불어넣는 병맛 모션그래픽 툴 <strong>Mopple</strong>. 누구나 3분 만에 <em>모핑</em>할 수 있어요.</p>
+          <div class="stack">
+            <a class="btn" href="/mopping">모핑 시작하기</a>
+            <a class="btn btn--ghost" href="#templates">템플릿 보기</a>
+          </div>
+          <p class="note" style="margin-top:10px;">* /mopping 에디터에서 템플릿을 선택하고, 화살표/텍스트/모션을 얹어 바로 GIF·동영상으로 내보내세요.</p>
+        </div>
+        <div class="card card--pad">
+          <!-- Place hero GIF under /assets/hero.gif -->
+          <img src="./assets/hero.gif" alt="Mopple 모핑 예시 애니메이션" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <h2 class="sec-title">모플에서 3D가 살아나는 3단계</h2>
+        <div class="grid grid--3">
+          <div class="step"><img src="./assets/infographic_step1.png" alt="1) 3D 모델 선택"></div>
+          <div class="step"><img src="./assets/infographic_step2.png" alt="2) 모션/텍스트/화살표 넣기"></div>
+          <div class="step"><img src="./assets/infographic_step3.png" alt="3) 영상·GIF로 내보내기"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:#FFF; border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+      <div class="container">
+        <h2 class="sec-title">캔바? 미드저니? 우린 <em>병맛</em>입니다</h2>
+        <p class="note" style="margin-top:-8px;margin-bottom:18px;">예쁘고 정적인 결과물 대신, 웃기고 살아 움직이는 3D 모션을 노립니다.</p>
+        <div class="grid grid--3">
+          <div class="sample"><img src="./assets/motion_sample_1.gif" alt="Bounce 모션 샘플"></div>
+          <div class="sample"><img src="./assets/motion_sample_2.gif" alt="Pop 모션 샘플"></div>
+          <div class="sample"><img src="./assets/motion_sample_3.gif" alt="Swirl 모션 샘플"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="templates">
+      <div class="container">
+        <h2 class="sec-title">템플릿부터 시작하세요</h2>
+        <div class="grid grid--4">
+          <!-- 12 thumbnails -->
+          <div class="template"><img src="./assets/thumb_01.png" alt="Template 01"><div class="cap"><span>Template 01</span><a class="btn btn--ghost" href="/mopping">사용</a></div></div>
+          <div class="template"><img src="./assets/thumb_02.png" alt="Template 02"><div class="cap"><span>Template 02</span><a class="btn btn--ghost" href="/mopping">사용</a></div></div>
+          <div class="template"><img src="./assets/thumb_03.png" alt="Template 03"><div class="cap"><span>Template 03</span><a class="btn btn--ghost" href="/mopping">사용</a></div></div>
+          <div class="template"><img src="./assets/thumb_04.png" alt="Template 04"><div class="cap"><span>Template 04</span><a class="btn btn--ghost" href="/mopping">사용</a></div></div>
+          <div class="template"><img src="./assets/thumb_05.png" alt="Template 05"><div class="cap"><span>Template 05</span><a class="btn btn--ghost" href="/mopping">사용</a></div></div>
+          <div class="template"><img src="./assets/thumb_06.png" alt="Template 06"><div class="cap"><span>Template 06</span><a class="btn btn--ghost" href="/mopping">사용</a></div></div>
+          <div class="template"><img src="./assets/thumb_07.png" alt="Template 07"><div class="cap"><span>Template 07</span><a class="btn btn--ghost" href="/mopping">사용</a></div></div>
+          <div class="template"><img src="./assets/thumb_08.png" alt="Template 08"><div class="cap"><span>Template 08</span><a class="btn btn--ghost" href="/mopping">사용</a></div></div>
+          <div class="template"><img src="./assets/thumb_09.png" alt="Template 09"><div class="cap"><span>Template 09</span><a class="btn btn--ghost" href="/mopping">사용</a></div></div>
+          <div class="template"><img src="./assets/thumb_10.png" alt="Template 10"><div class="cap"><span>Template 10</span><a class="btn btn--ghost" href="/mopping">사용</a></div></div>
+          <div class="template"><img src="./assets/thumb_11.png" alt="Template 11"><div class="cap"><span>Template 11</span><a class="btn btn--ghost" href="/mopping">사용</a></div></div>
+          <div class="template"><img src="./assets/thumb_12.png" alt="Template 12"><div class="cap"><span>Template 12</span><a class="btn btn--ghost" href="/mopping">사용</a></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="container">
+        <h2 class="sec-title">간단한 가격</h2>
+        <div class="grid grid--3">
+          <div class="card" style="padding:22px">
+            <h3 style="margin:0 0 6px">Free</h3>
+            <p class="note">워터마크 / 기본 모션</p>
+            <a class="btn" href="/mopping" style="margin-top:8px">시작</a>
+          </div>
+          <div class="card" style="padding:22px; border-color:#111">
+            <h3 style="margin:0 0 6px">Pro</h3>
+            <p class="note">워터마크 제거 / 프리미엄 모션 / 고해상도 내보내기</p>
+            <a class="btn" href="/subscribe" style="margin-top:8px">구독</a>
+          </div>
+          <div class="card" style="padding:22px">
+            <h3 style="margin:0 0 6px">Team</h3>
+            <p class="note">템플릿 공유 / 협업 / 맞춤 템플릿</p>
+            <a class="btn" href="/contact" style="margin-top:8px">문의</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div style="display:flex;align-items:center;gap:10px"><img src="./assets/logo_mopple.png" alt="Mopple" style="width:120px;height:auto"/> <span>© Mopple. All rights reserved.</span></div>
+      <div class="note">이용약관 · 개인정보처리방침</div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        const id = a.getAttribute('href');
+        if(id && id.length>1){ e.preventDefault(); document.querySelector(id)?.scrollIntoView({behavior:'smooth'}); }
+      });
+    });
+  </script>
+</body>
+</html>
